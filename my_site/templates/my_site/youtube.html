@@ -1,0 +1,36 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block content %}
+<section class="youtube-section">
+    <div class="pt-5">
+        <h1 class="text-center pt-4" style="color: white;">YouTube</h1>
+    </div>
+</section>
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-center pt-5" style="background-color: #EEEEEE;">
+                    {% for video in youtubes %}
+                    <article>
+                        {% video video.url '480x360' %}
+                        <div class="card-body">
+                            <h3>{{ video.title }}</h3>
+                        </div>
+                    </article>
+                    {% endfor %}
+            </div>
+            {% for post in posts %}
+            <div class="col-md-4 d-none d-md-block pt-4 mt-4">
+                <div class="posts text-center">
+                    <div class="post">
+                        <img class="" src="{{ post.image.url }}" height="300px" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}
