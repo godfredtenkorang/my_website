@@ -1,0 +1,28 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block content %}
+<section id="blog" class="pt-5 pb-5">
+    <div class="text-center" style="color:#fff; padding-top: 3%;">
+        <p class="text-muted">Check out my latest blog posts</p>
+        <h1 class="text-header">BLOG</h1>
+    </div>
+    <div class="container">
+        <div class="row pt-4">
+            {% for blog in blogs %}
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-5">
+                <div class="card-div mb-3">
+                    <img src="{{ blog.image.url }}" class="card-img-top" height="300px" width="100%" alt="">
+                    <div class="blog-metadata mt-2">
+                        <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
+                    </div>
+                    <a style="font-size: 25px; text-decoration:none; color:#fff" href="">{{ blog.title }}</a>
+                    <p>{{ blog.content }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

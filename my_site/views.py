@@ -21,6 +21,27 @@ def home(request):
     }
     return render(request, "my_site/index.html", context)
 
+def about(request):
+    return render(request, 'my_site/about.html')
+
+
+def resume(request):
+    return render(request, 'my_site/resume.html')
+
+def blog(request):
+    blogs = Blog.objects.all()
+    context = {
+        'blogs': blogs
+    }
+    return render(request, 'my_site/blog.html', context)
+
+def portfolio(request):
+    portfolios = Portfolio.objects.all()
+    context = {
+        'portfolios': portfolios
+    }
+    return render(request, 'my_site/portfolio.html', context)
+
 def youtube(request):
     youtube = Youtube.objects.all()
     posts = Post.objects.all()
@@ -29,3 +50,7 @@ def youtube(request):
         'posts':posts
     }
     return render(request, "my_site/youtube.html", context)
+
+def contact(request):
+    
+    return render(request, 'my_site/contact.html')

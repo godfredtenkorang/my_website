@@ -1,0 +1,100 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block content %}
+<section id="About" class="about-section pt-5 pb-5">
+    <div class="text-center" style="color:#fff; padding-top: 3%;">
+        <p class="text-muted">Know about me</p>
+        <h1 class="text-header">ABOUT ME</h1>
+    </div>
+    <div class="container">
+        <div class="row" style="padding-top: 10%;">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'my_site/images/Godey..png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 pt-5">
+                <div style="color: #fff;">
+                    <h4 style="color: #816797;">Personal Details</h4>
+                    <h2 style="font-weight: 700; line-height:1.5;">I'm Godfred Yaw Tenkorang, a Web Developer and Graphic Designer</h2>
+                    <p style="line-height: 1.5;">A Full-stack Web Developer, Mobile App Developer And YouTube Content Creator. I have been working as
+                        a Full-stack Web Developer for over 2 years.
+                        My design approach is always modern and simple, That attracts people towards it. Clients
+                        satisfaction is my 1st priority.
+                        I understand the requirements of clients and give them what they actually wanted.
+                        I guarantee that if you work with me,
+                        You will be satisfied and certainly prefer me later.
+                        Looking forward to working with you.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-4">
+    <div class="text-center" style="color:#fff; padding-top: 3%;">
+        <p class="text-muted">Services i offer to my clients</p>
+        <h1 class="text-header">MY SERVICES</h1>
+    </div>
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
+                <div class="card-div text-center pt-3">
+                    <img src="" alt="img">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
+                <div class="card-div text-center pt-3">
+                    <img src="" alt="img">
+                    <h3>Graphic Designer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
+                <div class="card-div text-center pt-3">
+                    <img src="" alt="img">
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="counter-section" style="overflow: hidden;">
+        <div class="row about-row">
+            <div class="col-lg-12 counter-img">
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'my_site/images/experiece.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">3+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Years Of Experience</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'my_site/images/complete.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">200+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'my_site/images/happy.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">100+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'my_site/images/clients.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">300+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock content %}

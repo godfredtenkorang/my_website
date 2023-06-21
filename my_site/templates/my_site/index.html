@@ -1,257 +1,34 @@
 {% extends 'my_site/base.html' %}
 {% load static %}
-
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'my_site/index.css' %}">
+{% endblock %}
 {% block content %}
-<section class="web-img">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="intro-content">
-                    <h1 class="h5" style="color: white;">
-                        Hi There!
-                    </h1>
-                    <h4 class="h2" style="color: white; font-weight:700;">I'm Godfred Tenkorang</h4>
-                    <p style="color: white; font-size:30px;">I Am Passionate Web Developer</p>
-                    <p style="color: white;">Creative Web Developer With Experience Providing High-Impact Web Solutions
-                        For Many Different Organizations.</p>
-                    <div class="pt-4">
-                        <a class="btn btn-outline-secondary" href="#contact">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 d-none d-md-block">
-                <div class="intro-img">
-                    <img class="rounded-circle" src="{% static 'my_site/images/Godey..PNG' %}" height="350px" width="350px"
-                        alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="About" class="about-section pt-5 pb-5" style="background-color: #EEEEEE;">
-    <h2 class="text-center text-header">ABOUT ME</h2>
-    <p class="text-center" style="text-decoration:underline;">KNOW ABOUT ME</p>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div>
-                    <img src="{% static 'my_site/images/Godey..png' %}" alt="">
-                </div>
-            </div>
-            <div class="col-md-6 pt-3">
-                <h2>PERSONAL DETAILS</h2>
-                <h1 class="h3">Hello, I am <span style="color: #816797;">Godfred Yaw Tenkorag</span></h1>
-                <p>A Full-stack Web Developer, Mobile App Developer And YouTube Content Creator. I Have been working as
-                    a Full-stack Web Developer for over 2 years.
-                    My design Approach is Always Modern and simple, That attracts people towards it. Clients
-                    Satisfaction is my 1st Priority.
-                    I understand the Requirements of Clients and Give them What They Actually Wanted.
-                    I Guarantee That if you work with me,
-                    You will be satisfied and certainly prefer me Later.
-                    Looking Forward to working with You.
-                </p>
-                <div class="skills">
-                    <h4>My Skills</h4>
-                    <div class="detail">
-                        <span class="display7">Python</span>
-                        <span class="display-8">95%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="python-bar"></div>
-                    </div>
-                    <div class="detail mt-2">
-                        <span class="display7">HTML5</span>
-                        <span class="display-8">94%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="html-bar"></div>
-                    </div>
-                    <div class="detail mt-2">
-                        <span class="display7">CSS</span>
-                        <span class="display-8">89%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="css-bar"></div>
-                    </div>
-                    <div class="detail mt-2">
-                        <span class="display7">JavaScript</span>
-                        <span class="display-8">80%</span>
-                    </div>
-                    <div class="bar">
-                        <div id="javascript-bar"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="counter-section mb-4" style="background-color: #111111;">
-    <div class="container-fluid">
-        <div class="row about-row">
-            <div class="col-lg-12 counter-img">
-                <div class="column">
-                    <div class="card-img">
-                        <img src="{% static 'my_site/images/experiece.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">3+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Years Of Experience</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card-img">
-                        <img src="{% static 'my_site/images/complete.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">200+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Projects Completed</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card-img">
-                        <img src="{% static 'my_site/images/happy.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">100+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Happy Clients</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card-img">
-                        <img src="{% static 'my_site/images/clients.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">300+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Clients</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="services" class="service-section pt-4">
-    <h2 class="text-center text-header">SERVICES</h2>
-    <p class="text-center" style="text-decoration:underline;">WHAT I DO</p>
-    <div class="container">
-        <div class="row pt-4 mt-4">
-            {% for service in services %}
-            <div class="col-md-4 pb-4">
-                <div class="card" style="text-align: center;">
-                    <div class="pt-3">
-                        <img style="height:50px; width:50px; text-align:center;" src="{{ service.image.url }}" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="text-center">{{ service.title }}</h3>
-                        <p class="text-center">{{ service.content }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-<section id="blog" class="pt-3 pb-4" style="background-color: #EEEEEE;">
-    <div class="container">
-        <h2 class="text-center text-header">MY BLOGS</h2>
-        <p class="text-center" style="text-decoration:underline;">LATEST NEWS</p>
-        <div class="row pt-4">
-            {% for blog in blogs %}
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <img src="{{ blog.image.url }}" class="card-img-top" height="300px" alt="">
-                    <div class="blog-metadata mt-2 ml-3">
-                        <a class="ml-2" style="text-decoration: none;" href="#">{{ blog.author }}</a>
-                        <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ blog.title }}</h5>
-                        <p class="card-text">{{ blog.content }}</p>
-                        <div class="text-center">
-                            <a class="btn btn-outline-secondary" style="color: #1B2430;" href="{{ blog.link }}">Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-<section id="portfolio" class="pt-4 pb-4">
-    <div class="container">
-        <h2 class="text-center text-header">MY PORTFOLIO</h2>
-        <p class="text-center" style="text-decoration:underline;">MY RECENT WORKS</p>
-        <div class="row">
-            {% for portfolio in portfolios %}
-            <div class="col-md-4">
-                <div class="some_posts text-center">
-                    <div class="img-post">
-                        <img class="post_img" src="{{ portfolio.image.url }}" height="350px" alt="">
-                        <div class="middle">
-                            <div class="img_title">{{ portfolio.content }}</div>
-                            <a href="{{ portfolio.link }}"><img src="{% static 'my_site/images/link1.png' %}" height="50px" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-<section id="contact">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="contact-section col-md-6 pb-4 p-5">
-                <div class="pt-4 mt-4">
-                    <div>
-                        <img class="contact-icons" src="{% static 'my_site/images/phone_logo.png' %}" height="40px"
-                            alt="">
-                        <span class="contact-1">Phone:</span>
-                        <span class="contact-2">+233553912334 / +233507777385</span>
-                    </div>
-                    <div class="mt-5">
-                        <img class="contact-icons" src="{% static 'my_site/images/mail_logo.png' %}" height="40px"
-                            alt="">
-                        <span class="contact-1">Email:</span>
-                        <span class="contact-2">godfredtenkorang9@gmail.com</span>
-                    </div>
-                    <div class="mt-5">
-                        <img class="contact-icons" src="{% static 'my_site/images/github_logo.png' %}" height="40px"
-                            alt="">
-                        <span><a class="contact-1" href="https://github.com/godfredtenkorang">Github:</a></span>
-                        <span class="contact-2">github.com/godfredtenkorang/<span>
-                    </div>
-                    <div class="mt-5">
-                        <img class="contact-icons" src="{% static 'my_site/images/linkedin_logo.png' %}" height="40px"
-                            alt="">
-                        <span><a class="contact-1"
-                                href="https://www.linkedin.com/in/godfred-tenkorang-616833242/">LinkedIn:</a></span>
-                        <span class="contact-2">linkedin.com/in/godfred-tenkorang-616833242/</span>
-                    </div>
-                    <div class="mt-5">
-                        <img class="contact-icons" src="{% static 'my_site/images/youtube.png' %}" height="40px" alt="">
-                        <span><a class="contact-1" href="https://www.youtube.com/@godeytech/">YouTube:</a></span>
-                        <span class="contact-2">youtube.com/@godeytech/</span>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-section2 col-md-6 pb-4 p-5">
-                <h2 class="pt-4" style="position: relative; color:white;">Get in touch</h2>
-                <div class="forms pt-4 mt-4">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <input type="text" class="form-control mt-2" id="name" name="name" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control mt-2" id="email" name="email"
-                                placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control mt-2" id="phone" name="phone"
-                                placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control mt-2" name="message" id="message" rows="4"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-outline-secondary">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+<section class="web-img">
+    <div class="intro-content">
+        <h4 class="h1" style="color: white; font-weight:900; font-size:60px">Godfred Yaw Tenkorang</h4>
+        <div class="container2">
+            <p class="p">I'm a</p>
+            <section class="animation">
+                <div class="first">
+                    <div>Web Developer</div>
+                </div>
+                <div class="second">
+                    <div>Graphic Designer</div>
+                </div>
+                <div class="third">
+                    <div>Content Creator</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="icon-bar d-none d-md-block">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+</section>
 {% endblock %}

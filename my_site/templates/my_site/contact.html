@@ -1,0 +1,75 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% load embed_video_tags %}
+
+{% block content %}
+
+<section id="contact" class="pt-5 pb-5">
+    <div class="text-center" style="color:#fff; padding-top: 3%;">
+        <p class="text-muted">You can contact me anytime</p>
+        <h1 class="text-header">GET IN TOUCH</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 pb-4 p-5">
+                <div class="pt-4 mt-4">
+                    <div>
+                        <img class="contact-icons" src="{% static 'my_site/images/phone_logo.png' %}" height="40px"
+                            alt="">
+                        <span class="contact-1">Phone:</span>
+                        <span class="contact-2">+233553912334 / +233507777385</span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="contact-icons" src="{% static 'my_site/images/mail_logo.png' %}" height="40px"
+                            alt="">
+                        <span class="contact-1">Email:</span>
+                        <span class="contact-2">godfredtenkorang9@gmail.com</span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="contact-icons" src="{% static 'my_site/images/github_logo.png' %}" height="40px"
+                            alt="">
+                        <span><a class="contact-1" href="https://github.com/godfredtenkorang">Github:</a></span>
+                        <span class="contact-2">github.com/godfredtenkorang/<span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="contact-icons" src="{% static 'my_site/images/linkedin_logo.png' %}" height="40px"
+                            alt="">
+                        <span><a class="contact-1"
+                                href="https://www.linkedin.com/in/godfred-tenkorang-616833242/">LinkedIn:</a></span>
+                        <span class="contact-2">linkedin.com/in/godfred-tenkorang-616833242/</span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="contact-icons" src="{% static 'my_site/images/youtube.png' %}" height="40px" alt="">
+                        <span><a class="contact-1" href="https://www.youtube.com/@godeytech/">YouTube:</a></span>
+                        <span class="contact-2">youtube.com/@godeytech/</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pb-4 p-5">
+                <h2 class="pt-4" style="position: relative; color:white;">Message Me</h2>
+                <div class="forms pt-4 mt-4">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-2" id="name" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-2" id="email" name="email"
+                                placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control mt-2" id="phone" name="phone"
+                                placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control mt-2" name="message" id="message" rows="4"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

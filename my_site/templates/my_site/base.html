@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'my_site/index.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% block css_files %}
+
+    {% endblock %}
 </head>
 <!-- colors -->
 <!-- #1B2430 -->
@@ -24,18 +28,6 @@
         font-family: sans-serif;
         font-weight: 600;
     }
-    .nav-link {
-        font-size: 20px;
-        box-shadow: inset 0 0 0 0 #816797;
-        color: #816797;
-        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    }
-
-    .nav-link:hover {
-        box-shadow: inset 600px 0 0 0 #816797;
-        color: white;
-    }
-
 
     .brand-name {
         color: #D2DAFF;
@@ -160,10 +152,13 @@
     }
 
     .web-img {
-        background-image: url("{% static 'my_site/images/web.png' %}");
+        background-image: url("{% static 'my_site/images/Godey..png' %}");
+        justify-content: center;
+        text-align: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
+        position: relative;
     }
 
     .web-img::before {
@@ -175,19 +170,15 @@
         right: 0;
         bottom: 0;
         background: #000;
-        opacity: 0.9;
+        opacity: 0.8;
+        height: 100vh;
     }
 
     .intro-content {
-        margin-top: 20%;
-        transform: translate(0%, 40%);
+        text-align: center;
+        transform: translate(0%, 150%);
     }
 
-    .intro-img {
-        margin-top: 20%;
-        text-align: center;
-        transform: translate(10%, 20%);
-    }
     .rounded-circle {
         border: 4px solid #816797;
     }
@@ -197,15 +188,16 @@
         transition: 0.75s ease;
     }
 
-    .bg-dark.scrolled {
+    /*.bg-dark.scrolled {
         background: #000 !important;
     }
-
+    */
     .detail {
         width: 100%;
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
+        color: #fff;
     }
     .bar {
         position: relative;
@@ -244,6 +236,22 @@
     @keyframes css-fill {
         100% {
             width: 89%;
+        }
+    }
+    #django-bar {
+        animation: django-fill 2s forwards;
+    }
+    @keyframes django-fill {
+        100% {
+            width: 98%;
+        }
+    }
+    #photoshop-bar {
+        animation: photoshop-fill 2s forwards;
+    }
+    @keyframes photoshop-fill {
+        100% {
+            width: 70%;
         }
     }
     #javascript-bar {
@@ -413,14 +421,120 @@
         font-size: 26px;
         font-weight: bold;
       }
-</style>
 
+    .bg-steel {
+    background-color: transparent !important;
+    transition: 0.75s ease;
+  }
+
+  .bg-steel.scrolled {
+    background: #131417 !important;
+    box-shadow: 0 3px 10px #131417;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  background-color: #131417;
+  font-family:'Libre Baskerville';
+}
+.p {
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+.container2 {
+  color: #e5e5e5;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 0.5rem;
+}
+
+.animation > div > div {
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+
+.icon-bar {
+  position: fixed;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(40%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 15px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  color: white;
+}
+
+.twitter {
+  color: white;
+}
+
+.google {
+  color: white;
+}
+
+.linkedin {
+  color: white;
+}
+
+.youtube {
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+.card-div {
+    color: #fff;
+}
+</style>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="{% url 'home-page' %}">
-                    <h4 class="brand-name">Godey<span style="color: #EEF1FF;">Tech</span></h4>
+                <a class="navbar-brand mr-4" href="{% url 'home' %}">
+                    <h2><span style="color: #816797;">Godey</span><span>Tech</span></h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -429,25 +543,22 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a style="color: #D2DAFF;" class="nav-link" href="{% url 'home-page' %}">Home</a>
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="color: #D2DAFF;" class="nav-link" href="#About">About</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="color: #D2DAFF;" class="nav-link" href="#services">Services</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'resume' %}">Resume</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="color: #D2DAFF;" class="nav-link" href="#blog">Blog</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="color: #D2DAFF;" class="nav-link" href="#portfolio">Portfolio</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a style="color: #D2DAFF;" class="nav-link" href="{% url 'youtube' %}">YouTube Channel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a style="color: #D2DAFF;" class="nav-link" href="#contact">Contact</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -455,7 +566,7 @@
         </nav>
     </header>
     {% block content %}{% endblock %}
-    <section class="pb-4" id="Follow-me" style="background-color: #000;">
+    <!-- <section class="pb-4" id="Follow-me" style="background-color: #000;">
         <div class="col text-center pt-4">
             <div>
                 <h2 style="position: relative; color:white;">Follow Me</h2>
@@ -475,8 +586,8 @@
                             class="fa fa-youtube fa-2x"></i></a></li>
             </ul>
         </div>
-        <div class="small text-center text-muted fst-italic">Copyright &copy; Godey Tech Website 2022</div>
-    </section>
+        <div class="small text-center text-muted fst-italic">Copyright &copy; Godey Tech 2023</div>
+    </section> -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
