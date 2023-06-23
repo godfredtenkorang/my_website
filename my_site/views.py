@@ -2,12 +2,10 @@ from django.shortcuts import render
 from .models import *
 
 def home(request):
-    services = Services.objects.all()
     blogs = Blog.objects.all()
     portfolios = Portfolio.objects.all()
     
     context = {
-        'services': services,
         'blogs': blogs,
         'portfolios': portfolios
     }
@@ -15,7 +13,6 @@ def home(request):
 
 def about(request):
     return render(request, 'my_site/about.html', {'title':'About'})
-
 
 def resume(request):
     return render(request, 'my_site/resume.html', {'title': 'Resume'})

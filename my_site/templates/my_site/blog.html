@@ -14,7 +14,7 @@
             {% for blog in blogs %}
             <div class="col-lg-4 col-md-6 col-sm-12 pb-5">
                 <div class="card2 mb-3">
-                    <img src="{{ blog.image.url }}" class="card-img-top" height="300px" width="100%" alt="">
+                    <img style="object-fit: fill;" src="{{ blog.image.url }}" class="card-img-top" height="400px" width="100%" alt="">
                     <div class="blog-metadata mt-2">
                         <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
                     </div>
