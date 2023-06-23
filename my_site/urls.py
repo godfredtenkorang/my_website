@@ -7,6 +7,6 @@ urlpatterns = [
     path('resume/', views.resume, name="resume"),
     path('portfolio/', views.portfolio, name="portfolio"),
     path('blog/', views.blog, name="blog"),
-    path("youtube_channel/", views.youtube, name="youtube"),
+    path('<pk>/blog_detail/', views.blog_detail, name="blog_detail"),
     path("contact/", views.contact, name="contact"),
 ]

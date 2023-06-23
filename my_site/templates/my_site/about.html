@@ -1,7 +1,7 @@
 {% extends 'my_site/base.html' %}
 {% load static %}
 {% block content %}
-<section id="About" class="about-section pt-5 pb-5">
+<section id="About" class="about-section pt-5 pb-5" style="overflow: hidden;">
     <div class="text-center" style="color:#fff; padding-top: 3%;">
         <p class="text-muted">Know about me</p>
         <h1 class="text-header">ABOUT ME</h1>
@@ -26,13 +26,20 @@
                         You will be satisfied and certainly prefer me later.
                         Looking forward to working with you.
                     </p>
+                    <div>
+                        <a href="https://web.facebook.com/godeytech"><i class="fa fa-facebook fa-2x social-a"></i></a>
+                        <a href=""><i class="fa fa-twitter fa-2x social-a"></i></a>
+                        <a href=""><i class="fa fa-instagram fa-2x social-a"></i></a>
+                        <a href=""><i class="fa fa-github fa-2x social-a"></i></a>
+                        <a href=""><i class="fa fa-youtube fa-2x social-a"></i></a>
+                    </div>
                 </div>
                 
             </div>
         </div>
     </div>
 </section>
-<section class="p-4">
+<section class="p-4" style="overflow: hidden;">
     <div class="text-center" style="color:#fff; padding-top: 3%;">
         <p class="text-muted">Services i offer to my clients</p>
         <h1 class="text-header">MY SERVICES</h1>
@@ -40,24 +47,45 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
-                <div class="card-div text-center pt-3">
-                    <img src="" alt="img">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/web2.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Web Development</h3>
+                    <p>Creating, building and maintaining websites and web applications that run online on a browser.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
-                <div class="card-div text-center pt-3">
-                    <img src="" alt="img">
-                    <h3>Graphic Designer</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/mobile.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Mobile App Development</h3>
+                    <p>Creating software applications that run on mobile devices like smartphones and tablets.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
-                <div class="card-div text-center pt-3">
-                    <img src="" alt="img">
-                    <h3>Web Developer</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/design.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Graphic Designer</h3>
+                    <p>Combines art and technology to create visual content used in various media, such as website and more.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/windows.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Windows Installation</h3>
+                    <p>Setting up windows operating system on a computer or computers, or upgrading an existing windows installation.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/market.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Marketing</h3>
+                    <p>Strategies and helps businesses undertake to promote their products, services, or brand to target customers or audiences.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/assistance.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">IT Assistant</h3>
+                    <p>Providing technical support and assistance in managing information technology (IT) systems and infrastructure within an organization.</p>
                 </div>
             </div>
         </div>
@@ -76,21 +104,21 @@
                 <div class="column">
                     <div class="card-img">
                         <img src="{% static 'my_site/images/complete.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">200+</h3>
+                        <h3 class="pt-3">4+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Projects Completed</p>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card-img">
                         <img src="{% static 'my_site/images/happy.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">100+</h3>
+                        <h3 class="pt-3">6+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Happy Clients</p>
                     </div>
                 </div>
                 <div class="column">
                     <div class="card-img">
                         <img src="{% static 'my_site/images/clients.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">300+</h3>
+                        <h3 class="pt-3">8+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Clients</p>
                     </div>
                 </div>

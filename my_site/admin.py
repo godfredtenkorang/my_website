@@ -7,7 +7,8 @@ class AdminVideo(AdminVideoMixin, admin.ModelAdmin):
 
 admin.site.register(Services)
 admin.site.register(Contact)
+admin.site.register(Article)
 admin.site.register(Blog)
-admin.site.register(Youtube, AdminVideo)
+admin.site.register(Category)
 admin.site.register(Portfolio)
 admin.site.register(Post)
