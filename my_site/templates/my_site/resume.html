@@ -1,5 +1,8 @@
 {% extends 'my_site/base.html' %}
 {% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'my_site/index.css' %}">
+{% endblock %}
 {% block content %}
 <section id="services" class="service-section pt-5 pb-5">
     <div class="text-center" style="color:#fff; padding-top: 3%;">
