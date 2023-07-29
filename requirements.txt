@@ -59,5 +59,6 @@ urllib3==1.26.13
 virtualenv==20.16.7
 virtualenv-clone==0.5.7
 webencodings==0.5.1
+whitenoise==6.5.0
 xhtml2pdf==0.2.8
 zopfli==0.2.2
