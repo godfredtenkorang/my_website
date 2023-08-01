@@ -13,6 +13,9 @@ class Portfolio(models.Model):
     image = models.ImageField(upload_to='portfolio-img', default='')
     title = models.CharField(max_length=100)
     link = models.URLField(max_length=200)
+    
+    class Meta:
+        ordering = ['-title']
 
     def __str__(self):
         return str(self.category) 
