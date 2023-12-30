@@ -5,11 +5,11 @@
 {% endblock %}
 {% block content %}
 <section id="portfolio" class="pt-5 pb-5">
-    <div class="text-center" style="color:#fff; padding-top: 3%;">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
         <p class="text-muted pt-5">Check out some of my work</p>
         <h1 class="text-header">PORTFOLIO</h1>
     </div>
-    <div class="text-center pt-5">
+    <div class="text-center pt-5" data-aos="fade-up">
         <a class="port-link" style="font-size: 18px; color:#fff" href="{% url 'portfolio' %}">All</a>
         {% for category in categories %}
             <a class="port-link" style="font-size: 18px; color:#fff" href="{% url 'portfolio' %}?category={{ category.name }}">{{category.name }}</a>
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row pt-3">
             {% for portfolio in portfolios %}
-            <div class="col-md-4 mb-3 d-flex justify-content-center">
+            <div class="col-md-4 mb-3 d-flex justify-content-center" data-aos="fade-down">
                 <div class="some_posts text-center">
                     <div class="img-post">
                         <img style="object-fit: fill;" class="post_img" src="{{ portfolio.image.url }}" height="400px" width="100%" alt="">

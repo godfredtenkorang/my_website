@@ -5,14 +5,14 @@
 {% endblock %}
 {% block content %}
 <section id="blog" class="pt-5 pb-5">
-    <div class="text-center" style="color:#fff; padding-top: 3%;">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
         <p class="text-muted pt-5">Check out my latest blog posts</p>
         <h1 class="text-header">BLOG DETAIL</h1>
     </div>8
     <div class="container">
         <div class="row pt-4">
             <div class="col-md-8">
-                <div class="card detail-card mb-4">
+                <div class="card detail-card mb-4" data-aos="fade-up">
                         <img style="object-fit: fill;" class="card-img-top" src="{{ blog.image.url }}" width="100%" alt="Card image cap">
                     <div class="blog-metadata mt-2">
                         <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
