@@ -25,5 +25,5 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'phone', 'message']
     
 @admin.register(Blog)
-class ContactAdmin(admin.ModelAdmin):
+class BlogAdmin(admin.ModelAdmin):
     list_display = ['article', 'title', 'image', 'content', 'date_posted']
