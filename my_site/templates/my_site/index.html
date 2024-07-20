@@ -286,7 +286,7 @@
         <a class="port-link" style="font-size: 18px; color:#fff" href="#Portfolio">All</a>
         {% for category in categories %}
         <a class="port-link" style="font-size: 18px; color:#fff"
-            href="#Portfolio?category={{ category.name }}">{{category.name }}</a>
+            href="{% url 'portfolio' %}?category={{ category.name }}">{{category.name }}</a>
         {% endfor %}
     </div>
     <div class="container">
