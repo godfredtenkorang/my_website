@@ -223,14 +223,13 @@ display: none;
     }
 
     .web-img {
-        background-image: url("{% static 'my_site/images/Godey..png' %}");
+        background-image: url("{% static 'my_site/images/godey3.JPG' %}");
         justify-content: center;
         text-align: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
         width: 100%;
-        position: fixed;
     }
 
     .web-img::before {
@@ -241,7 +240,7 @@ display: none;
         left: 0;
         right: 0;
         bottom: 0;
-        background: #000;
+        background: #131417;
         opacity: 0.8;
         height: 100vh;
     }
@@ -600,7 +599,7 @@ body {
   .port-link {
     padding: 10px;
   }
-
+ 
   .detail-card {
     background-color: #131417;
     color: #fff;
@@ -619,12 +618,12 @@ body {
         <span class="line line3"></span>
       </div>
       <ul class="menu-items">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'resume' %}">Resume</a></li>
-        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-        <li><a href="{% url 'blog' %}">Blog</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="#index">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Resume">Resume</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Blog">Blog</a></li>
+        <li><a href="#Contact">Contact</a></li>
       </ul>
       <a class="logo-link" href="{% url 'home' %}">
         <h1 class="logo"><span>Godey</span><span>Tech</span></h1>
@@ -667,11 +666,14 @@ body {
         </nav>
     </header> -->
     {% block content %}{% endblock %}
+    <div class="text-white p-3">
+      <a class="text-white">© Godey Tech 2024</a>
+    </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 1000,
-        once: true
+        once: false,
       });
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -689,6 +691,7 @@ body {
             $('nav').toggleClass('scrolled', $(this).scrollTop() > 50)
         })
     </script>
+    <script src="{% static 'my_site/index.js' %}"></script>
 </body>
 
 </html>

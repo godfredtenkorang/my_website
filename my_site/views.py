@@ -3,11 +3,18 @@ from .models import *
 
 def home(request):
     blogs = Blog.objects.all()
-    portfolios = Portfolio.objects.all()
+    category = request.GET.get('category')
+    
+    if category == None:
+        portfolios = Portfolio.objects.order_by('image')
+    else:
+        portfolios = Portfolio.objects.filter(category__name=category)
+    categories = Category.objects.all()
     
     context = {
         'blogs': blogs,
-        'portfolios': portfolios
+        'categories': categories,
+        'portfolios': portfolios,
     }
     return render(request, "my_site/index.html", context)
 

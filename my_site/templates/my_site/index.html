@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="{% static 'my_site/index.css' %}">
 {% endblock %}
 {% block content %}
-
-<section class="web-img" data-aos="fade-in">
+<section class="web-img" data-aos="fade-in" id="index">
+    <a href="#About" class="scroll-down"></a>
     <div class="intro-content">
         <h4 class="h1" style="color: white; font-weight:900; font-size:60px">Godfred Yaw Tenkorang</h4>
         <div class="container2">
@@ -30,6 +30,362 @@
         <a href="https://www.linkedin.com/in/godfred-tenkorang-616833242/" class="linkedin"><i class="fa fa-linkedin"></i></a>
         <a href="https://www.instagram.com/godey.tech/" class="linkedin"><i class="fa fa-instagram"></i></a>
         <a href="https://www.youtube.com/channel/UC7FdcUoK1laj3st9t06PzHg" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+</section>
+<section id="About" class="about-section pt-5 pb-5" style="overflow: hidden;">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-up">
+        <p class="text-muted pt-5">Know about me</p>
+        <h1 class="text-header">ABOUT ME</h1>
+    </div>
+    <div class="container">
+        <div class="row" style="padding-top: 10%;">
+            <div class="col-lg-6 col-md-6 col-sm-12 text-center" data-aos="fade-left">
+                <div class="d-flex justify-content-center">
+                    <img class="about-img" src="{% static 'my_site/images/godey2.jpg' %}" height="500px" width="450px" alt="godey tech">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 pt-5" data-aos="fade-right">
+                <div style="color: #fff;">
+                    <h4 style="color: #816797;">Personal Details</h4>
+                    <h2 style="font-weight: 700; line-height:1.5;">I'm Godfred Yaw Tenkorang, a Web Developer and
+                        Graphic Designer</h2>
+                    <p style="line-height: 1.5;">A Full-stack Web Developer, Mobile App Developer And YouTube Content
+                        Creator. I have been working as
+                        a Full-stack Web Developer for over 2 years.
+                        My design approach is always modern and simple, That attracts people towards it. Clients
+                        satisfaction is my 1st priority.
+                        I understand the requirements of clients and give them what they actually wanted.
+                        I guarantee that if you work with me,
+                        You will be satisfied and certainly prefer me later.
+                        Looking forward to working with you.
+                    </p>
+                    <div>
+                        <a href="https://web.facebook.com/godeytech"><i class="fa fa-facebook fa-2x social-a"></i></a>
+                        <a href="https://twitter.com/GodfredTenkora3"><i class="fa fa-twitter fa-2x social-a"></i></a>
+                        <a href="https://www.linkedin.com/in/godfred-tenkorang-616833242/"><i
+                                class="fa fa-linkedin fa-2x social-a"></i></a>
+                        <a href="https://www.instagram.com/godey.tech/"><i
+                                class="fa fa-instagram fa-2x social-a"></i></a>
+                        <a href="https://github.com/godfredtenkorang"><i class="fa fa-github fa-2x social-a"></i></a>
+                        <a href="https://www.youtube.com/channel/UC7FdcUoK1laj3st9t06PzHg"><i
+                                class="fa fa-youtube fa-2x social-a"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-4" style="overflow: hidden;">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted">Services i offer to my clients</p>
+        <h1 class="text-header">MY SERVICES</h1>
+    </div>
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3" data-aos="fade-left">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/web2.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Web Development</h3>
+                    <p>Creating, building and maintaining websites and web applications that run online on a browser.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3" data-aos="fade-right">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/mobile.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Mobile App Development</h3>
+                    <p>Creating software applications that run on mobile devices like smartphones and tablets.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3" data-aos="fade-left">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/design.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Graphic Designer</h3>
+                    <p>Combines art and technology to create visual content used in various media, such as website and
+                        more.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3" data-aos="fade-right">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/windows.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Windows Installation</h3>
+                    <p>Setting up windows operating system on a computer or computers, or upgrading an existing windows
+                        installation.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3" data-aos="fade-left">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/market.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">Marketing</h3>
+                    <p>Strategies and helps businesses undertake to promote their products, services, or brand to target
+                        customers or audiences.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-3" data-aos="fade-right">
+                <div class="card-div text-center pt-3 pb-3">
+                    <img src="{% static 'my_site/images/assistance.png' %}" height="30px" alt="img">
+                    <h3 class="mt-2">IT Assistant</h3>
+                    <p>Providing technical support and assistance in managing information technology (IT) systems and
+                        infrastructure within an organization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="counter-section" style="overflow: hidden;" data-aos="fade-down">
+    <div class="row about-row">
+        <div class="col-lg-12 counter-img">
+            <div class="column">
+                <div class="card-img">
+                    <img src="{% static 'my_site/images/experiece.png' %}" height="50px" alt="icon">
+                    <h3 class="pt-3">3+</h3>
+                    <p style="font-size: 20px; font-weight:bold;">Years Of Experience</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card-img">
+                    <img src="{% static 'my_site/images/complete.png' %}" height="50px" alt="icon">
+                    <h3 class="pt-3">5+</h3>
+                    <p style="font-size: 20px; font-weight:bold;">Projects Completed</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card-img">
+                    <img src="{% static 'my_site/images/happy.png' %}" height="50px" alt="icon">
+                    <h3 class="pt-3">7+</h3>
+                    <p style="font-size: 20px; font-weight:bold;">Happy Clients</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card-img">
+                    <img src="{% static 'my_site/images/clients.png' %}" height="50px" alt="icon">
+                    <h3 class="pt-3">8+</h3>
+                    <p style="font-size: 20px; font-weight:bold;">Clients</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Resume" class="service-section pt-5 pb-5">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">Check out my Resume</p>
+        <h1 class="text-header">RESUME</h1>
+    </div>
+    <div class="container">
+        <div class="row pt-4 mt-4">
+            <div class="col-md-6" data-aos="fade-left">
+                <div style="color: #fff;">
+                    <h3 class="pb-3">Education</h3>
+                    <div class="card-div pt-3 p-4 mb-2">
+                        <h3>Business</h3>
+                        <p>Abuakwa State College / 2017 - 2020</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p> -->
+                    </div>
+                    <div class="card-div pt-3 p-4 mb-2">
+                        <h3>Mobile App Development</h3>
+                        <p>Criswell School of Business and Technology / 2021 - 2022</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p> -->
+                    </div>
+                    <div class="card-div pt-3 p-4 mb-2">
+                        <h3>Accounting with Computing</h3>
+                        <p>Kumasi Technical University / 2021 - 2023</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-right">
+                <div style="color: #fff;">
+                    <h3 class="pb-3">Experience</h3>
+                    <div class="card-div pt-3 p-4 mb-2">
+                        <h3>Front-End Developer</h3>
+                        <p>Flutter / 2021 - 2022</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p> -->
+                    </div>
+                    <div class="card-div pt-3 p-4 mb-2">
+                        <h3>Back-End Developer</h3>
+                        <p>Django / 2022 - Present</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p> -->
+                    </div>
+                    <div class="card-div pt-3 p-4 mb-2">
+                        <h3>Graphic Designer</h3>
+                        <p>Photoshop / 2023 - Present</p>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4 pb-4">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted">Services i offer to my clients</p>
+        <h1 class="text-header">MY SKILLS</h1>
+    </div>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="skills">
+                    <div class="detail">
+                        <span class="display7">Python</span>
+                        <span class="display-8">95%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="python-bar"></div>
+                    </div>
+                    <div class="detail mt-2">
+                        <span class="display7">HTML</span>
+                        <span class="display-8">94%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="html-bar"></div>
+                    </div>
+                    <div class="detail mt-2">
+                        <span class="display7">CSS</span>
+                        <span class="display-8">89%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="css-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="skills">
+                    <div class="detail">
+                        <span class="display7">Django</span>
+                        <span class="display-8">98%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="django-bar"></div>
+                    </div>
+                    <div class="detail mt-2">
+                        <span class="display7">Photoshop</span>
+                        <span class="display-8">70%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="photoshop-bar"></div>
+                    </div>
+                    <div class="detail mt-2">
+                        <span class="display7">JavaScript</span>
+                        <span class="display-8">80%</span>
+                    </div>
+                    <div class="bar">
+                        <div id="javascript-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Portfolio" class="pt-5 pb-5">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">Check out some of my work</p>
+        <h1 class="text-header">PORTFOLIO</h1>
+    </div>
+    <div class="text-center pt-5" data-aos="fade-up">
+        <a class="port-link" style="font-size: 18px; color:#fff" href="#Portfolio">All</a>
+        {% for category in categories %}
+        <a class="port-link" style="font-size: 18px; color:#fff"
+            href="#Portfolio?category={{ category.name }}">{{category.name }}</a>
+        {% endfor %}
+    </div>
+    <div class="container">
+        <div class="row pt-3">
+            {% for portfolio in portfolios %}
+            <div class="col-md-4 mb-3 d-flex justify-content-center" data-aos="fade-down">
+                <div class="some_posts text-center">
+                    <div class="img-post">
+                        <img style="object-fit: fill;" class="post_img" src="{{ portfolio.image.url }}" height="400px"
+                            width="100%" alt="">
+                        <div class="middle">
+                            <div class="img_title">{{ portfolio.title }}</div>
+                            <a href="{{ portfolio.link }}"><img src="{% static 'my_site/images/link1.png' %}"
+                                    height="50px" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="Blog" class="pt-5 pb-5">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">Check out my latest blog posts</p>
+        <h1 class="text-header">BLOG</h1>
+    </div>
+    <div class="container">
+        <div class="row pt-4">
+            {% for blog in blogs %}
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-5" data-aos="fade-left">
+                <div class="card2 mb-3">
+                    <img style="object-fit: fill;" src="{{ blog.image.url }}" class="card-img-top" height="400px"
+                        width="100%" alt="">
+                    <div class="blog-metadata mt-2">
+                        <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
+                    </div>
+                    <a style="font-size: 25px; text-decoration:none; color:#fff"
+                        href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a>
+                    <p>{{ blog.content }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="Contact" class="pt-5 pb-3">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">You can contact me anytime</p>
+        <h1 class="text-header">GET IN TOUCH</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pb-4 p-2" data-aos="fade-left">
+                <h2 class="pt-4" style="position: relative; color:white;">Contact Info</h2>
+                <p style="color: #fff;">Hello! I'm a freelance web developer with expertise in creating dynamic and
+                    responsive websites. If you need help with
+                    web development projects, including front-end design, back-end functionality, or full-stack
+                    solutions, feel free to
+                    reach out to me. I'm passionate about delivering high-quality results that meet your needs and
+                    exceed your expectations.</p>
+                <div class="pt-4 mt-4 ml-5">
+                    <ul class="contact-list">
+                        <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Kumasi,
+                                    Ashanti Region</span></i></li>
+                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                        href="tel:+233553912334" title="Give me a call">+233 55 391 2334</a></span></i>
+                        </li>
+                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                        href="mailto:godfredtenkorang9@gmail.com"
+                                        title="Send me an email">godfredtenkorang9@gmail.com</a></span></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 pb-4" data-aos="fade-right">
+                <h2 class="pt-2" style="position: relative; color:white;">Message Me</h2>
+                <div class="forms pt-4 mt-4">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-2" id="name" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-2" id="email" name="email"
+                                placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control mt-2" id="phone" name="phone"
+                                placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control mt-2" name="message" id="message" rows="4"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
