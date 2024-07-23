@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{% static 'my_site/index.css' %}">
 {% endblock %}
 {% block content %}
+
 <section class="web-img" data-aos="fade-in" id="index">
     <a href="#About" class="scroll-down"></a>
     <div class="intro-content">
@@ -385,11 +386,15 @@
                             <textarea class="form-control mt-2" name="message" id="message" rows="4"
                                 placeholder="Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-outline-secondary">Send</button>
+                        <button id="submit" type="submit" class="btn btn-outline-secondary">Send</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<div class="alert">
+    <i class='bx bxs-x-circle close'></i>
+    <p>Form Submitted</p>
+</div>
 {% endblock %}
