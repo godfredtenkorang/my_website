@@ -7,6 +7,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return f"/category/{self.id}/"
 
 class Portfolio(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -19,6 +22,9 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return str(self.category) 
+    
+    def get_absolute_url(self):
+        return f"/porfolio /{self.id}/"
 
 class Article(models.Model):
     article = models.TextField()

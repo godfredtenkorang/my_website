@@ -1,5 +1,9 @@
 {% extends 'my_site/base.html' %}
 {% load static %}
+{% block og-caption %}{{ blog.title }}{% endblock %}
+{% block og-description %}@{{ blog.content }}{% endblock %}
+{% block og-image %}{{ blog.image }}{% endblock %}
+{% block tw-image %}{{ blog.image }}{% endblock %}
 {% block css_files %}
 <link rel="stylesheet" href="{% static 'my_site/index.css' %}">
 {% endblock %}

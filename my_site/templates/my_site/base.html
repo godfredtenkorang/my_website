@@ -20,6 +20,16 @@
     {% else %}
         <title>Godey Tech</title>
     {% endif %}
+    <meta name="description", content="Personal website to tell more about myself and my portfolio">
+    <meta name="keywords", content="Portfolio, images, blog, GodeyTech, social platform">
+    <meta name="author", content="Godey Tech">
+
+    <meta property="og:url" content="http://{{ request.META.HTTP_HOST }}{{ request.path }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{% block og-caption %}Godey Tech{% endblock %}">
+    <meta property="og:description" content="{% block og-description %}Personal website to tell more about myself and my portfolio{% endblock %}">
+    <meta property="og:image" content="{% block og-image %}http://{{ request.META.HTTP_HOST }}{% static 'my_site/images/godey_tech.JPG' %}{% endblock %}">
+    <meta property="twitter:image" content="{% block tw-image %}http://{{ request.META.HTTP_HOST }}{% static 'my_site/images/godey_tech.JPG' %}{% endblock %}">
 </head>
 <!-- colors -->
 <!-- #1B2430 -->
