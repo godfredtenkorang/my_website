@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
+from django.core.mail import send_mail
+from django.conf import settings
 
 def home(request):
     blogs = Blog.objects.all()
@@ -10,6 +12,24 @@ def home(request):
     else:
         portfolios = Portfolio.objects.filter(category__name=category)
     categories = Category.objects.all()
+    
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        contact = Contact(name=name, email=email, phone=phone, message=message)
+        contact.save()
+        
+        send_mail(
+            f"New Contact from {name}",
+            f'Message:{message} \n {phone} \n {email} \n end',
+                email,  # From email
+                [settings.EMAIL_HOST_USER],  # To email
+                fail_silently=False,
+        ),
+        
+        return redirect('home')
     
     context = {
         'blogs': blogs,
