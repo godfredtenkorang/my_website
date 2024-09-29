@@ -54,7 +54,7 @@ class Blog(models.Model):
         
     def get_image(self):
         if self.image:
-            return f"https://voteafric.com" + self.image.url
+            return f"https://godeytech.com" + self.image.url
         return ''
     
     def __str__(self):
