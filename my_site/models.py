@@ -57,6 +57,9 @@ class Blog(models.Model):
             return f"https://godeytech.com" + self.image.url
         return ''
     
+    def get_article(self):
+        return self.article.article
+    
     def __str__(self):
         return self.title
 
