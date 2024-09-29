@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['.godeytech.com','165.227.92.107', 'localhost','127.0.0.1']
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'my_site',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',

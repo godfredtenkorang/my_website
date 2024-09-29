@@ -32,6 +32,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap,{'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', TemplateView.as_view(template_name='my_site/robots.txt', content_type='text/plain')),
     path('admin/', admin.site.urls),
+    path('api/', include("my_site.api.urls")),
     path("", include("my_site.urls"))
 ]
 if settings.DEBUG:

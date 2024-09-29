@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from PIL import Image
 
 
 class Category(models.Model):
@@ -42,6 +43,19 @@ class Blog(models.Model):
     
     class Meta:
         ordering = ['-date_posted',]
+        
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        
+        img = Image.open(self.image.path)
+        output_size = (300, 300)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
+        
+    def get_image(self):
+        if self.image:
+            return f"https://voteafric.com" + self.image.url
+        return ''
     
     def __str__(self):
         return self.title

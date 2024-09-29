@@ -9,7 +9,7 @@
 {% endblock %}
 {% block content %}
 
-<section class="web-img" data-aos="fade-in" id="index">
+<section class="web-img" id="index" style="overflow: hidden;">
     <a href="#About" class="scroll-down"></a>
     <div class="intro-content">
         <h4 class="h1" style="color: white; font-weight:900; font-size:60px">Godfred Yaw Tenkorang</h4>
@@ -172,7 +172,7 @@
         </div>
     </div>
 </section>
-<section id="Resume" class="service-section pt-5 pb-5">
+<section id="Resume" class="pt-5 pb-5" style="overflow: hidden;">
     <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
         <p class="text-muted pt-5">Check out my Resume</p>
         <h1 class="text-header">RESUME</h1>
@@ -322,7 +322,7 @@
     <div class="container">
         <div class="row pt-4">
             {% for blog in blogs %}
-            <div class="col-lg-4 col-md-6 col-sm-12 pb-5" data-aos="fade-left">
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-5" data-aos="fade-down">
                 <div class="card2 mb-3">
                     <img style="object-fit: fill;" src="{{ blog.image.url }}" class="card-img-top" height="400px"
                         width="100%" alt="">
@@ -345,7 +345,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 pb-4 p-2" data-aos="fade-left">
+            <div class="col-md-6 pb-4 p-2" data-aos="fade-in">
                 <h2 class="pt-4" style="position: relative; color:white;">Contact Info</h2>
                 <p style="color: #fff;">Hello! I'm a freelance web developer with expertise in creating dynamic and
                     responsive websites. If you need help with
