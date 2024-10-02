@@ -21,3 +21,11 @@ def get_blog(request, id):
     if request.method == 'GET':
         serializer = BlogSerializer(blog)
         return Response(serializer.data)
+    
+@api_view(['POST'])
+def create_blog(request):
+    serializer = BlogSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
