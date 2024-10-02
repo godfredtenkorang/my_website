@@ -38,7 +38,7 @@ class Blog(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-img', default='')
-    content = models.TextField()
+    content = models.TextField(null=True)
     date_posted = models.DateTimeField(default=timezone.now)
     
     class Meta:
