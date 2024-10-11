@@ -26,4 +26,4 @@ class ContactAdmin(admin.ModelAdmin):
     
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['article', 'title', 'image', 'content', 'date_posted']
+    list_display = ['title']
