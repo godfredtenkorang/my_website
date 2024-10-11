@@ -23,6 +23,6 @@ admin.site.register(Category, CategoryAdmin)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'phone', 'message']
     
-@admin.register(Blog)
-class BlogAdmin(admin.ModelAdmin):
-    list_display = ['title']
+# @admin.register(Blog)
+# class BlogAdmin(admin.ModelAdmin):
+#     list_display = ['title']
