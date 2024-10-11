@@ -31,25 +31,25 @@ class Portfolio(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-img', default='')
-    content1 = models.TextField(null=True, default="", blank=True)
-    content2 = models.TextField(null=True, default="", blank=True)
-    content3 = models.TextField(null=True, default="", blank=True)
-    content4 = models.TextField(null=True, default="", blank=True)
-    content5 = models.TextField(null=True, default="", blank=True)
-    content6 = models.TextField(null=True, default="", blank=True)
-    content7 = models.TextField(null=True, default="", blank=True)
-    content8 = models.TextField(null=True, default="", blank=True)
-    content9 = models.TextField(null=True, default="", blank=True)
-    content10 = models.TextField(null=True, default="", blank=True)
-    content11 = models.TextField(null=True, default="", blank=True)
-    content12 = models.TextField(null=True, default="", blank=True)
-    content13 = models.TextField(null=True, default="", blank=True)
-    content14 = models.TextField(null=True, default="", blank=True)
-    content16 = models.TextField(null=True, default="", blank=True)
-    content17 = models.TextField(null=True, default="", blank=True)
-    content18 = models.TextField(null=True, default="", blank=True)
-    content19 = models.TextField(null=True, default="", blank=True)
-    content20 = models.TextField(null=True, default="", blank=True)
+    content = models.TextField(null=True, default="", blank=True)
+    # content2 = models.TextField(null=True, default="", blank=True)
+    # content3 = models.TextField(null=True, default="", blank=True)
+    # content4 = models.TextField(null=True, default="", blank=True)
+    # content5 = models.TextField(null=True, default="", blank=True)
+    # content6 = models.TextField(null=True, default="", blank=True)
+    # content7 = models.TextField(null=True, default="", blank=True)
+    # content8 = models.TextField(null=True, default="", blank=True)
+    # content9 = models.TextField(null=True, default="", blank=True)
+    # content10 = models.TextField(null=True, default="", blank=True)
+    # content11 = models.TextField(null=True, default="", blank=True)
+    # content12 = models.TextField(null=True, default="", blank=True)
+    # content13 = models.TextField(null=True, default="", blank=True)
+    # content14 = models.TextField(null=True, default="", blank=True)
+    # content16 = models.TextField(null=True, default="", blank=True)
+    # content17 = models.TextField(null=True, default="", blank=True)
+    # content18 = models.TextField(null=True, default="", blank=True)
+    # content19 = models.TextField(null=True, default="", blank=True)
+    # content20 = models.TextField(null=True, default="", blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
     
     class Meta:
@@ -69,7 +69,7 @@ class Blog(models.Model):
         return ''
     
     def get_article(self):
-        return self.content1
+        return self.content
     
     def __str__(self):
         return self.title
