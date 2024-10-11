@@ -27,18 +27,36 @@ class Portfolio(models.Model):
     def get_absolute_url(self):
         return f"/porfolio /{self.id}/"
 
-class Article(models.Model):
-    article = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+# class Article(models.Model):
+#     article = models.TextField()
+#     date = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.article
+#     def __str__(self):
+#         return self.article
     
 class Blog(models.Model):
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    # article = models.ForeignKey(Article, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-img', default='')
-    content = models.TextField(null=True)
+    content1 = models.CharField(max_length=250, null=True)
+    content2 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content3 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content4 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content5 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content6 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content7 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content8 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content9 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content10 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content11 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content12 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content13 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content14 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content16 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content17 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content18 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content19 = models.TextField(max_length=250, null=True, default="", blank=True)
+    content20 = models.TextField(max_length=250, null=True, default="", blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
     
     class Meta:
