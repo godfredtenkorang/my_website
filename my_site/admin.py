@@ -3,7 +3,6 @@ from .models import *
 
 
 # admin.site.register(Contact)
-# admin.site.register(Blog)
 # admin.site.register(Category)
 # admin.site.register(Portfolio)
 
@@ -23,6 +22,3 @@ admin.site.register(Category, CategoryAdmin)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'phone', 'message']
     
-# @admin.register(Blog)
-# class BlogAdmin(admin.ModelAdmin):
-#     list_display = ['title']
