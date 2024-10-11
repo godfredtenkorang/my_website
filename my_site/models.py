@@ -38,7 +38,7 @@ class Blog(models.Model):
     # article = models.ForeignKey(Article, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-img', default='')
-    content1 = models.CharField(max_length=250, null=True)
+    content1 = models.TextField(max_length=250, null=True, default="", blank=True)
     content2 = models.TextField(max_length=250, null=True, default="", blank=True)
     content3 = models.TextField(max_length=250, null=True, default="", blank=True)
     content4 = models.TextField(max_length=250, null=True, default="", blank=True)
