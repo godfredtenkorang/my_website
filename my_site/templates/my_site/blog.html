@@ -19,11 +19,22 @@
                         <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
                     </div>
                     <a style="font-size: 25px; text-decoration:none; color:#fff" href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a>
-                    <p>{{ blog.content }}</p>
+                    <p id="text-element">{{ blog.title }}</p>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
+
+<script>
+    function truncateText(selector, maxLength) {
+        const element = document.querySelector(selector);
+        const text = element.textContent;
+        if (text.length > maxLength) {
+            element.textContent = text.slice(0, maxLength) + '...';
+        }
+    }
+    truncateText('#text-element', 120); // Truncate text to 120 charactors
+</script>
 {% endblock content %}
