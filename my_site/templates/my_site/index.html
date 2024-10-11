@@ -331,7 +331,7 @@
                     </div>
                     <a style="font-size: 25px; text-decoration:none; color:#fff"
                         href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a>
-                    <p>{{ blog.content }}</p>
+                    <p id="text-element">{{ blog.article }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -397,4 +397,15 @@
     <i class='bx bxs-x-circle close'></i>
     <p>Form Submitted</p>
 </div>
+
+<script>
+    function truncateText(selector, maxLength) {
+        const element = document.querySelector(selector);
+        const text = element.textContent;
+        if (text.length > maxLength) {
+            element.textContent = text.slice(0, maxLength) + '...';
+        }
+    }
+    truncateText('#text-element', 120); // Truncate text to 120 charactors
+</script>
 {% endblock %}
