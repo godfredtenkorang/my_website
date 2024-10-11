@@ -76,7 +76,7 @@ class Blog(models.Model):
         return ''
     
     def get_article(self):
-        return self.article.article
+        return self.content1
     
     def __str__(self):
         return self.title
