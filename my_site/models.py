@@ -27,18 +27,10 @@ class Portfolio(models.Model):
     def get_absolute_url(self):
         return f"/porfolio /{self.id}/"
 
-# class Article(models.Model):
-#     article = models.TextField()
-#     date = models.DateTimeField(auto_now_add=True)
 
-#     def __str__(self):
-#         return self.article
-    
 class Blog(models.Model):
-    # article = models.ForeignKey(Article, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='blog-img', default='')
-    content = models.TextField(null=True, default="", blank=True)
     content1 = models.TextField(null=True, default="", blank=True)
     content2 = models.TextField(null=True, default="", blank=True)
     content3 = models.TextField(null=True, default="", blank=True)
