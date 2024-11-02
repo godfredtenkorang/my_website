@@ -1,0 +1,61 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'my_site/index.css' %}">
+{% endblock %}
+{% block content %}
+<section class="text-center">
+    {% if messages %}
+    {% for message in messages %}
+    <div id="message-timer" class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+</section>
+<section id="contact" class="pt-5 pb-3">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">Support our Cause</p>
+        <h1 class="text-header">DONATE NOW</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pb-4 p-2" data-aos="fade-left">
+                <h2 class="pt-4" style="position: relative; color:white;">Support GodeyTech - Empowering Web Development & Tech Solutions</h2>
+                <p style="color: #fff;">At GodeyTech, our mission is to provide innovative and accessible web development solutions for small businesses,
+                startups, and individuals in Ghana and beyond. By combining creativity, technology, and a passion for digital
+                transformation, we help people establish their online presence and grow their brands.</p>
+                <div class="pt-4 mt-4">
+                    <div class="text-white">
+                        <h4>Why Your Support Matters</h4>
+                        <p>Your donations will help GodeyTech continue to:</p>
+                    </div>
+                    <ul class="contact-list text-white pt-3">
+                        <li>1. Expand Our Resources: Equip our team with advanced tools and technologies to create faster and more efficient websites.</li>
+                        <li>2. Provide Affordable Solutions: Keep our services affordable for small businesses and entrepreneurs who need support with
+                        limited budgets.</li>
+                        <li>3. Offer Free Training: Empower the youth with free coding and web development tutorials, workshops, and online resources
+                        to encourage careers in tech.</li>
+                        <li>4. Support Local Talent: Collaborate with up-and-coming web developers in Ghana, providing opportunities to work on
+                        real-world projects.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6 pb-4" data-aos="fade-right">
+                <br>
+                <h2 class="pt-2" style="position: relative; color:white;">Donate Here</h2>
+                <div class="forms pt-4 mt-4">
+                    <form method="POST" class="text-white">
+                        {% csrf_token %}
+
+                        {{payment_form|crispy}}
+
+                        <button type="submit" class="btn btn-outline-secondary">Donate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

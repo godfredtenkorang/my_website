@@ -33,7 +33,8 @@ urlpatterns = [
     path('robots.txt', TemplateView.as_view(template_name='my_site/robots.txt', content_type='text/plain')),
     path('admin/', admin.site.urls),
     path('api/', include("my_site.api.urls")),
-    path("", include("my_site.urls"))
+    path("", include("my_site.urls")),
+    path("donate/", include("payment.urls")),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

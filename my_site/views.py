@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 def home(request):
-    # blogs = Blog.objects.all()
+    blogs = Blog.objects.all()[:3]
     category = request.GET.get('category')
     
     if category == None:
@@ -32,7 +32,7 @@ def home(request):
         return redirect('home')
     
     context = {
-        # 'blogs': blogs,
+        'blogs': blogs,
         'categories': categories,
         'portfolios': portfolios,
     }
@@ -45,18 +45,18 @@ def resume(request):
     return render(request, 'my_site/resume.html', {'title': 'Resume'})
 
 def blog(request):
-    # blogs = Blog.objects.all()
+    blogs = Blog.objects.all()
     context = {
-        # 'blogs': blogs,
+        'blogs': blogs,
         'title': 'Blog',
     }
     return render(request, 'my_site/blog.html', context)
 
 def blog_detail(request, pk):
-    # blog = Blog.objects.get(id=pk)
+    blog = Blog.objects.get(id=pk)
     
     context = {
-        # 'blog':blog,
+        'blog':blog,
         'title': 'Blog Detail',
     }
     return render(request, 'my_site/blog_detail.html', context)

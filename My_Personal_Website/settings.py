@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['.godeytech.com','165.227.92.107', 'localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.godeytech.com','', 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -35,6 +35,9 @@ ALLOWED_HOSTS = ['.godeytech.com','165.227.92.107', 'localhost','127.0.0.1']
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'my_site',
+    'payment',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -93,11 +96,11 @@ WSGI_APPLICATION = 'My_Personal_Website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'godeyDB',
-        'USER': 'godfred',
-        'PASSWORD': 'Gony@100',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': config('DB_TABLE'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
 
@@ -153,5 +156,11 @@ EMAIL_USE_TLS = 'False'
 
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+PAYSTACK_SECRET_KEY = config("PAYSTACK_SECRET_KEY")
+PAYSTACK_PUBLIC_KEY = config("PAYSTACK_PUBLIC_KEY")
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 EMAIL_TIMEOUT = 60

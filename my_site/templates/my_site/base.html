@@ -646,12 +646,13 @@ body {
         <span class="line line3"></span>
       </div>
       <ul class="menu-items">
-        <li><a href="#index">Home</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Resume">Resume</a></li>
         <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-        <li><a href="#Blog">Blog</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
         <li><a href="#Contact">Contact</a></li>
+        <li><a href="{% url 'donate' %}">Donate</a></li>
       </ul>
       <a class="logo-link" href="{% url 'home' %}">
         <h1 class="logo"><span>Godey</span><span>Tech</span></h1>
