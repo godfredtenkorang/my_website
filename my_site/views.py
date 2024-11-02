@@ -52,8 +52,8 @@ def blog(request):
     }
     return render(request, 'my_site/blog.html', context)
 
-def blog_detail(request, pk):
-    blog = Blog.objects.get(id=pk)
+def blog_detail(request, blog_slug):
+    blog = Blog.objects.get(slug=blog_slug)
     
     context = {
         'blog':blog,

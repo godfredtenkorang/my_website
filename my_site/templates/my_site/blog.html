@@ -18,7 +18,7 @@
                     <div class="blog-metadata mt-2">
                         <small class="text-muted">{{ blog.date_posted|date:"F d, Y" }}</small>
                     </div>
-                    <a style="font-size: 25px; text-decoration:none; color:#fff" href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a>
+                    <a style="font-size: 25px; text-decoration:none; color:#fff" href="{% url 'blog_detail' blog.slug %}">{{ blog.title }}</a>
                     <p id="text-element">{{ blog.content }}</p>
                 </div>
             </div>

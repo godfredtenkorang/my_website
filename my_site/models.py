@@ -52,6 +52,7 @@ class Blog(models.Model):
     content18 = models.TextField(null=True, blank=True, default="")
     content19 = models.TextField(null=True, blank=True, default="")
     content20 = models.TextField(null=True, blank=True, default="")
+    slug = models.SlugField(default="godey", unique=True)
     date_posted = models.DateTimeField(default=timezone.now)
     
     class Meta:
