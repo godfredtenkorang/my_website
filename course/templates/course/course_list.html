@@ -1,0 +1,22 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'my_site/index.css' %}">
+{% endblock %}
+{% block content %}
+<section class="text-center">
+    {% if messages %}
+    {% for message in messages %}
+    <div id="message-timer" class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+</section>
+<section id="contact" class="pt-5 pb-3">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">Build yourself now</p>
+        <h1 class="text-header">COURSES AVAILABLE</h1>
+    </div>
+    
+</section>
+
+{% endblock content %}

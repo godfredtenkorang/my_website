@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'my_site',
     'payment',
+    'course',
     'crispy_forms',
     'crispy_bootstrap4',
     'rest_framework',

@@ -7,6 +7,9 @@
 {% block css_files %}
 <link rel="stylesheet" href="{% static 'my_site/index.css' %}">
 {% endblock %}
+<style>
+    
+</style>
 {% block content %}
 
 <section class="web-img" id="index" style="overflow: hidden;">
@@ -32,9 +35,11 @@
         <a href="https://web.facebook.com/alo.judgement" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="https://twitter.com/GodfredTenkora3" class="twitter"><i class="fa fa-twitter"></i></a>
         <a href="https://github.com/godfredtenkorang" class="google"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/godfred-tenkorang-616833242/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/godfred-tenkorang-616833242/" class="linkedin"><i
+                class="fa fa-linkedin"></i></a>
         <a href="https://www.instagram.com/godey.tech/" class="linkedin"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.youtube.com/channel/UC7FdcUoK1laj3st9t06PzHg" class="youtube"><i class="fa fa-youtube"></i></a>
+        <a href="https://www.youtube.com/channel/UC7FdcUoK1laj3st9t06PzHg" class="youtube"><i
+                class="fa fa-youtube"></i></a>
     </div>
 </section>
 <section id="About" class="about-section pt-5 pb-5" style="overflow: hidden;">
@@ -46,14 +51,14 @@
         <div class="row" style="padding-top: 10%;">
             <div class="col-lg-6 col-md-6 col-sm-12 text-center" data-aos="fade-left">
                 <div class="d-flex justify-content-center">
-                    <img class="about-img" src="{% static 'my_site/images/godey2.jpg' %}" height="500px" width="450px" alt="godey tech">
+                    <img class="about-img" src="{% static 'my_site/images/godey2.jpg' %}" height="500px" width="450px"
+                        alt="godey tech">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 pt-5" data-aos="fade-right">
                 <div style="color: #fff;">
                     <h4 style="color: #816797;">Personal Details</h4>
-                    <h2 style="font-weight: 700; line-height:1.5;">I'm Godfred Yaw Tenkorang, a Web Developer and
-                        Graphic Designer</h2>
+                    <h2 style="font-weight: 700; line-height:1.5;">I'm Godfred Yaw Tenkorang, a Full-Stack Web Developer</h2>
                     <p style="line-height: 1.5;">A Full-stack Web Developer, Mobile App Developer And YouTube Content
                         Creator. I have been working as
                         a Full-stack Web Developer for over 2 years.
@@ -64,6 +69,9 @@
                         You will be satisfied and certainly prefer me later.
                         Looking forward to working with you.
                     </p>
+                    <br>
+                    <a class="btn btn-outline-secondary" href="#Contact">Say Hello</a>
+                    <br><br>
                     <div>
                         <a href="https://web.facebook.com/godeytech"><i class="fa fa-facebook fa-2x social-a"></i></a>
                         <a href="https://twitter.com/GodfredTenkora3"><i class="fa fa-twitter fa-2x social-a"></i></a>
@@ -338,6 +346,63 @@
         </div>
     </div>
 </section>
+<!-- Testimonial Section -->
+<div class="testimonial-section">
+    <h2 class="text-header">WHAT PEOPLE SAY</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-slide">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <img src="{% static 'my_site/images/eunice.JPG' %}" alt="Client 1">
+                <p>"Godey Tech has consistently demonstrated excellence in delivering innovative and reliable technology solutions. Their
+                dedication to quality, customer satisfaction, and cutting-edge advancements makes them a trusted partner for businesses
+                seeking to optimize operations and drive growth. Whether it's through tailored IT services or transformative digital
+                tools, Godey Tech stands out as a beacon of innovation and professionalism."</p>
+                <h4>- Eunice Ansah</h4>
+            </div>
+            <div class="testimonial">
+                <img src="{% static 'my_site/images/ben.jpg' %}" alt="Client 3">
+                <p>"I love how convenient GBStoreGH makes online shopping. The delivery service is super reliable, and the range of
+                    products
+                    is amazing. I’m a loyal customer now!"</p>
+                <h4>- Benjamin Ohene-Asare</h4>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <img src="{% static 'my_site/images/bishop.jpeg' %}" alt="Client 2">
+                <p>"Working with Godey Tech has been a game-changer for our business. Their team created a sleek, functional website that
+                perfectly captures our brand's essence. Highly recommend their expertise!"</p>
+                <h4>- Fred Afriyie Bimpong</h4>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <img src="{% static 'my_site/images/akuaa.jpg' %}" alt="Client 3">
+                <p>"We needed a dynamic and user-friendly website, and Godey Tech delivered beyond expectations. Their attention to detail
+                and innovative approach were truly impressive."</p>
+                <h4>- DJ Akuaa</h4>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="testimonial">
+                <img src="{% static 'my_site/images/nana.JPG' %}" alt="Client 3">
+                <p>"Shopping on GBStoreGH was seamless! From browsing to checkout, the process was smooth, and the delivery was prompt.
+                Excellent customer service too!"</p>
+                <h4>- Jethro Gyekye</h4>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="testimonial">
+                <img src="{% static 'my_site/images/john.JPG' %}" alt="Client 3">
+                <p>"I love how convenient GBStoreGH makes online shopping. The delivery service is super reliable, and the range of products
+                is amazing. I’m a loyal customer now!"</p>
+                <h4>- John Tenagyei</h4>
+            </div>
+        </div>
+        <!-- Slider Buttons -->
+        <div class="slider-buttons">
+            <button id="prev-btn">❮</button>
+            <button id="next-btn">❯</button>
+        </div>
+    </div>
+</div>
 <section id="Contact" class="pt-5 pb-3">
     <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
         <p class="text-muted pt-5">You can contact me anytime</p>
@@ -361,8 +426,8 @@
                                         href="tel:+233553912334" title="Give me a call">+233 55 391 2334</a></span></i>
                         </li>
                         <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
-                                        href="mailto:godfredtenkorang9@gmail.com"
-                                        title="Send me an email">godfredtenkorang9@gmail.com</a></span></i></li>
+                                        href="mailto:godeytech@gmail.com"
+                                        title="Send me an email">godeytech@gmail.com</a></span></i></li>
                     </ul>
                 </div>
             </div>
@@ -407,5 +472,31 @@
         }
     }
     truncateText('#text-element', 100); // Truncate text to 120 charactors
+</script>
+
+<script>
+    
+        const slider = document.querySelector('.testimonial-slide');
+        const slides = document.querySelectorAll('.testimonial');
+        const prevBtn = document.querySelector('#prev-btn');
+        const nextBtn = document.querySelector('#next-btn');
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const width = slides[0].clientWidth;
+            slider.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
+
+        window.addEventListener('resize', updateSlider);
 </script>
 {% endblock %}
