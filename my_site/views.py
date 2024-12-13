@@ -106,3 +106,7 @@ def sms(request):
         )
         return JsonResponse(response)
     return render(request, 'my_site/send_sms.html')
+
+
+def custom_404(request, exception):
+    return render(request, 'my_site/404.html', status=404)
