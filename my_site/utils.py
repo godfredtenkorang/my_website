@@ -6,7 +6,7 @@ def send_sms(recipients, message):
     apiKey = settings.MNOTIFY_API_KEY
     payload = {
         "key": apiKey,
-        "sender": 'NewspringAG',
+        "sender": 'GodeyTech',
         "recipient[]": recipients,
         "message": message,
         "is_schedule": False,
