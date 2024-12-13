@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.core.mail import send_mail
 from django.conf import settings
+from .utils import send_sms
+from django.http import JsonResponse
 
 def home(request):
     blogs = Blog.objects.all()[:3]
@@ -87,3 +89,20 @@ def contact(request):
         contact.save()
         return render(request, 'my_site/contact.html')
     return render(request, 'my_site/contact.html', {'title': 'Contact'},)
+
+
+def sms(request):
+    if request.method == 'POST':
+        recipients = request.POST.get("recipients").split(",")
+        recipients = [recipient.strip() for recipient in recipients]
+        message = request.POST.get('message')
+        response = send_sms(recipients, message)
+        
+        SMSLog.objects.create(
+            recipients=", ".join(recipients),
+            message=message, 
+            status=response.get('status'), 
+            response=response,
+        )
+        return JsonResponse(response)
+    return render(request, 'my_site/send_sms.html')

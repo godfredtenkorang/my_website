@@ -1,0 +1,56 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'my_site/index.css' %}">
+{% endblock %}
+{% block content %}
+<section id="contact" class="pt-5 pb-3">
+    <div class="text-center" style="color:#fff; padding-top: 3%;" data-aos="fade-in">
+        <p class="text-muted pt-5">You can contact me anytime</p>
+        <h1 class="text-header">SEND SMS</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pb-4 p-2" data-aos="fade-left">
+                <h2 class="pt-4" style="position: relative; color:white;">Contact Info</h2>
+                <p style="color: #fff;">Hello! I'm a freelance web developer with expertise in creating dynamic and
+                    responsive websites. If you need help with
+                    web development projects, including front-end design, back-end functionality, or full-stack
+                    solutions, feel free to
+                    reach out to me. I'm passionate about delivering high-quality results that meet your needs and
+                    exceed your expectations.</p>
+                <div class="pt-4 mt-4 ml-5">
+                    <ul class="contact-list">
+                        <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Kumasi,
+                                    Ashanti Region</span></i></li>
+                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                        href="tel:+233553912334" title="Give me a call">+233 55 391 2334</a></span></i>
+                        </li>
+                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                        href="mailto:godfredtenkorang9@gmail.com"
+                                        title="Send me an email">godfredtenkorang9@gmail.com</a></span></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 pb-4" data-aos="fade-right">
+                <h2 class="pt-2" style="position: relative; color:white;">Message Me</h2>
+                <div class="forms pt-4 mt-4">
+                    <form method="POST" action="{% url 'send-sms' %}">
+                        {% csrf_token %}
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-2" id="recipients" name="recipients"
+                                placeholder="Recipients">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control mt-2" name="message" id="message" rows="4"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary">Send SMS</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
